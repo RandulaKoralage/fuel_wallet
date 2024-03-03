@@ -5,3 +5,4 @@ license = "Apache-2.0"
 name = "wallet_script"
 
 [dependencies]
+wallet_lib = { path = "../wallet_lib" }
