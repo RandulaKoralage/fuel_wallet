@@ -1,11 +1,10 @@
-contract;
+script;
 
-abi MyContract {
-    fn test_function() -> bool;
-}
+use std::constants::BASE_ASSET_ID;
 
-impl MyContract for Contract {
-    fn test_function() -> bool {
-        true
-    }
+use wallet_lib::Wallet;
+
+fn main() {
+    let caller = abi(Wallet, 0xc9e8b612bb3efa4805c062c6f9e5542aa0a6f7746c17db76c757f9d240ba430c);
+    caller.transfer_funds(20, dfdf);
 }
