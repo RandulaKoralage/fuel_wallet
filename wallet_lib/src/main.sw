@@ -1,11 +1,9 @@
-contract;
+library wallet_lib
 
-abi MyContract {
-    fn test_function() -> bool;
-}
+abi Wallet{
+   [#storage(read,write)]
+   fn recieve_funds();
 
-impl MyContract for Contract {
-    fn test_function() -> bool {
-        true
-    }
+   [#storage(read,write)]
+   fn transfer_funds(amount_to_send : u64, reciever_address:Address);
 }
